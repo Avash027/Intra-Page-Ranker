@@ -22,7 +22,9 @@ func main() {
 	alpha := flag.Float64("alpha", constants.ALPHA, "Constant used while calculating page rank")
 	epsilon := flag.Float64("epsilon", constants.EPSILON, "Directly proportional to accuracy of results but also consumes more time")
 	numOfResult := flag.Int("maxRank", constants.NUM_OF_RESULT, "Max Rank upto which you want to see the result")
-
+	dir := flag.String("dir", constants.DIR, "The directory to export the data to")
+	fileName := flag.String("filename", constants.FILE_NAME, "The name of the file to export the data to")
+	ftype := flag.String("type", constants.TYPE, "The type of exporter to use (json or csv)")
 	// Parse command line flags
 	flag.Parse()
 
@@ -41,9 +43,9 @@ func main() {
 				Epsilon: *epsilon,
 			},
 			Exporter: &exporter.RexOpts{
-				Type:     "csv",
-				Dir:      "./",
-				FileName: "filename.csv",
+				Type:     *ftype,
+				Dir:      *dir,
+				FileName: *fileName,
 			},
 			NumOfResults: *numOfResult,
 		},

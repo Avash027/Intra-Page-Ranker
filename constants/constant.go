@@ -12,4 +12,7 @@ const (
 	NUM_OF_RESULT       = 100
 	DOMAIN              = "avash.in"
 	MAX_PARALLELISM     = 5
+	DIR                 = "./"
+	FILE_NAME           = "default.json"
+	TYPE                = "json"
 )
