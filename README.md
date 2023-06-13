@@ -2,6 +2,8 @@
 
 # <center> Intra Page Ranker </center>
 
+<img src="https://cdn.jsdelivr.net/gh/avash027/assets/crawler_example.png" />
+
 Intra-Page Ranker is a tool for calculating the page rank of a website. It uses a Markov matrix to calculate the rank of each page on the website, and exports the results to a file.
 
 ## Features
